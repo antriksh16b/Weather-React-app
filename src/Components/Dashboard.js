@@ -33,7 +33,7 @@ function Dashboard(){
            dispatch(removeAll());
     }
     return(
-        <div className="flex flex-col h-full items-center w-full max-w-lg smaller">
+        <div className="flex flex-col h-full items-center w-full max-w-xl smaller">
         <div className="flex justify-center bg-blue-400/80 gap-5 mt-2 shadow-md border rounded-lg p-2 cursor-context-menu">
             <img 
             className="h-7 w-7" 

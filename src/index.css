@@ -9,7 +9,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+body{
+  zoom: 100%;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -19,15 +21,13 @@ code {
     margin: 5px;
   }
 }
-@media(max-width:350px){
-  .font-size{
-    font-size: 12px;
-  }
+@media(max-width:390px){
+  
   .smaller{
     width: 95%;
   }
 }
-@media(max-width:300px){
+@media(max-width:550px){
   .date{
     flex-direction: column-reverse;
   }
@@ -70,5 +70,10 @@ code {
   }
   .arrange{
     flex-direction: column;
+  }
+}
+@media(max-width:360px){
+  .font-size{
+    font-size:12px
   }
 }
