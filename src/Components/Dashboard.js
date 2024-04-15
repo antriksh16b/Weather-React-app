@@ -17,7 +17,7 @@ function Dashboard(){
     useEffect(()=>{
          const timeOutId=setTimeout(()=>{
             setDebounceInput(input);
-         },500)
+         },400)
          return(()=>{
             clearTimeout(timeOutId);
          })
@@ -45,7 +45,7 @@ function Dashboard(){
         <Form handleSubmit={handleSubmit} setInput={setInput} input={input}></Form>
         <div className="flex justify-center max-w-lg h-fit w-full m-4 mt-2 flex-wrap max-h-[375px] overflow-y-auto rounded-lg">
             {arrayOfCity.map((currentValue)=>(
-                (<SmallCard res={currentValue}></SmallCard>)           //rendering 
+                (<SmallCard res={currentValue.location} id={currentValue.id}></SmallCard>)           //rendering 
             ))}
         </div>
         <div className>

@@ -7,7 +7,6 @@ function useWeatherInfo({city,component}){
         let fetchData=async ()=>{
             try{
             if(city){
-    
             let response=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=9e654b72087bc9a2b044d9ab6a7c3bbd`);
             if(!response.ok){
                 throw new Error("Not result found");;
@@ -16,7 +15,7 @@ function useWeatherInfo({city,component}){
             setData(data);
             setFetchError(null);
         }
-        else if(component!==city){
+        else if(component!=="City" && component!=="SmallCard"){
              if(navigator.geolocation){
                 navigator.geolocation.getCurrentPosition(async (position)=>{
                     let response=await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=9e654b72087bc9a2b044d9ab6a7c3bbd`)
